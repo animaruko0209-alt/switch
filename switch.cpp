@@ -1,36 +1,37 @@
 ﻿#include <iostream>
 
-enum class EnemyState
+enum class GameScene
 {
-    Idle,
-    Attacking,
-    Defending,
-    Fleeing
+    StartUp,
+    Title,
+    MainMenu,
+    InGame,
+    Result
 };
 
 class Enemy
 {
-    EnemyState state;
+    GameScene state;
 
     void Update()
     {
         switch (state)
         {
-        case EnemyState::Idle:
-            // Handle idle state
+        case GameScene::StartUp:
+
             break;
-        case EnemyState::Attacking:
-            // Handle attacking state
+        case GameScene::Title:
+
             break;
-        case EnemyState::Defending:
-            // Handle defending state
+        case GameScene::MainMenu:
+
             break;
-        case EnemyState::Fleeing:
-            // Handle fleeing state
+        case GameScene::InGame:
+
             break;
-        default:
-            // Handle unknown state
-            break;
+		case GameScene::Result:
+
+			break;
         }
 	}
 
@@ -39,5 +40,6 @@ class Enemy
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
 }
